@@ -1,5 +1,8 @@
 {
     "hello": "hello world!!",
     "language": "Language",
-    "count": "count is: {count}"
+    "count": "count is: {count}",
+    "home": "Home",
+    "about": "About",
+    "service": "Service"
 }
