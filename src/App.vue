@@ -34,7 +34,9 @@ export default defineComponent({
   <Test/>
     <RouterView v-slot="{ Component }">
       <Suspense>
-        <component :is="Component" />
+        <div>
+          <component :is="Component" />
+        </div>
       </Suspense>
   </RouterView>
   </div>
