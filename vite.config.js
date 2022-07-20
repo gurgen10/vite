@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import Pages from 'vite-plugin-pages'
 // import { resolve, dirname } from 'node:path'
 // import { fileURLToPath } from 'url'
 import vue from '@vitejs/plugin-vue'
@@ -11,6 +12,9 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    Pages({
+      extensions: ['vue', 'md'],
+    }),
     // vueI18n({
     //   // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
     //   // compositionOnly: false,

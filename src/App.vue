@@ -28,10 +28,11 @@ export default defineComponent({
   <div class="container mx-auto p-4 text-center">
     <Header/>
     
-    <h1 class="mt-6 text-2xl font-bold underline text-red-600">
+    <h1 class="mt-6 text-2xl font-bold underline text-yellow-500">
       {{t('hello')}}
     </h1>
   <Test/>
+  <router-view />
   </div>
 </template>
 
