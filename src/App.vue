@@ -32,7 +32,11 @@ export default defineComponent({
       {{t('hello')}}
     </h1>
   <Test/>
-  <router-view />
+    <RouterView v-slot="{ Component }">
+      <Suspense>
+        <component :is="Component" />
+      </Suspense>
+  </RouterView>
   </div>
 </template>
 

@@ -24,7 +24,7 @@
             <div>
                 <form>
                     <label>{{ t('language') }}</label>
-                    <select v-model="locale" class="ml-4 px-4 py-3 rounded-full">
+                    <select v-model="locale" class="ml-4 px-4 py-3 rounded-full" @change="toggleLocales">
                         <option value="en">en</option>
                         <option value="am">am</option>
                     </select>
@@ -42,9 +42,19 @@ import { useI18n } from "vue-i18n";
 export default defineComponent({
   name: "header",
   setup() {
+    const toggleLocales = () => {
+        console.log(444);
+  // change to some real logic
+  const nextLocale =
+    locales[(locales.indexOf(locale.value) + 1) % locales.length]
+
+  const base = nextLocale === DEFAULT_LOCALE ? '' : `/${nextLocale}`
+
+  window.location.pathname = base + route.fullPath
+}
 
     const { t, locale } = useI18n()
-    return { t, locale }
+    return { t, locale, toggleLocales }
   },
 });
 </script>

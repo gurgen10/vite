@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import Pages from 'vite-plugin-pages'
+import viteSSR from 'vite-ssr/plugin.js'
 // import { resolve, dirname } from 'node:path'
 // import { fileURLToPath } from 'url'
 import vue from '@vitejs/plugin-vue'
@@ -11,6 +12,7 @@ export default defineConfig({
     host: true,
   },
   plugins: [
+    viteSSR(),
     vue(),
     Pages({
       extensions: ['vue', 'md'],

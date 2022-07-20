@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/head": "^0.7.6",
+    "vite-ssr": "^0.16.0",
     "vue": "^3.2.37",
     "vue-i18n": "^9.1.10",
     "vue-router": "^4.1.2"
